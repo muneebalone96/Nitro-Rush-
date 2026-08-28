@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#07090e" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Nitro Rush: Street Legends</title>
+    <meta name="description" content="High-octane 3D street car racing game optimized for Android and Redmi A3." />
+    <meta property="og:title" content="Nitro Rush: Street Legends" />
+    <meta property="og:description" content="High-octane 3D street car racing game optimized for Android and Redmi A3." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Rajdhani:wght@500;600;700&family=Teko:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --sat: env(safe-area-inset-top, 0px);
+        --sab: env(safe-area-inset-bottom, 0px);
+        --sal: env(safe-area-inset-left, 0px);
+        --sar: env(safe-area-inset-right, 0px);
+      }
+      * {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      input, textarea {
+        -webkit-user-select: auto;
+        user-select: auto;
+      }
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #07090e;
+        color: #ffffff;
+        overflow: hidden;
+        overscroll-behavior: none;
+        touch-action: none;
+        font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      .font-racing {
+        font-family: 'Orbitron', 'Teko', sans-serif;
+      }
+      .font-speed {
+        font-family: 'Teko', 'Orbitron', sans-serif;
+      }
+      /* Android notch & navigation safe padding helpers */
+      .pt-safe { padding-top: max(12px, env(safe-area-inset-top)); }
+      .pb-safe { padding-bottom: max(12px, env(safe-area-inset-bottom)); }
+      .pl-safe { padding-left: max(12px, env(safe-area-inset-left)); }
+      .pr-safe { padding-right: max(12px, env(safe-area-inset-right)); }
+      /* Custom scrollbars */
+      ::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(10, 15, 30, 0.5);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(249, 115, 22, 0.4);
+        border-radius: 4px;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-BV_6k3DA.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CvixEPVQ.css">
+  </head>
+  <body class="bg-[#07090e] text-white selection:bg-cyan-500 selection:text-black">
+    <div id="root" class="h-[100dvh] w-[100dvw] overflow-hidden"></div>
+  </body>
+</html>
+

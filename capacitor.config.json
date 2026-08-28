@@ -1,0 +1,15 @@
+{
+  "appId": "com.nitrorush.streetlegends",
+  "appName": "Nitro Rush: Street Legends",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https",
+    "cleartext": true
+  },
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "backgroundColor": "#07090e"
+  }
+}

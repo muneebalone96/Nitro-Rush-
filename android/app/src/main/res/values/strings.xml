@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Nitro Rush: Street Legends</string>
+    <string name="title_activity_main">Nitro Rush: Street Legends</string>
+    <string name="package_name">com.nitrorush.streetlegends</string>
+    <string name="custom_url_scheme">com.nitrorush.streetlegends</string>
+</resources>

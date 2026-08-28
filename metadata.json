@@ -1,0 +1,6 @@
+{
+  "name": "Nitro Rush: Street Legends",
+  "description": "High-octane 3D mobile-first street car racing game with AI opponents, nitro boosts, customizable sports cars, upgrades, diverse tracks, and career modes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
