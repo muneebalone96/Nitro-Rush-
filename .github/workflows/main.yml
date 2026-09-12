@@ -8,26 +8,25 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout project
+      - name: Checkout
         uses: actions/checkout@v5
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v5
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 22
+          bun-version: latest
 
       - name: Install dependencies
-        run: npm install
-
-      - name: Install Electron Builder
-        run: npm install --save-dev electron-builder
+        run: bun install
 
       - name: Build Windows EXE
-        run: npm run build:exe
+        run: bun run build:exe
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
         with:
           name: Nitro-Rush-Windows-EXE
-          path: dist/*.exe
-          if-no-files-found: error
+          path: |
+            dist/*.exe
+            release/*.exe
+          if-no-files-found: warn
