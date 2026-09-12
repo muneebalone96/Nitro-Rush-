@@ -21,8 +21,10 @@ jobs:
       - name: Install dependencies
         run: npm install --no-package-lock
 
-      - name: Install Electron Builder
-        run: npm install --no-package-lock --no-save electron-builder
+      - name: Verify Electron and Electron Builder
+        run: |
+          npx electron --version
+          npx electron-builder --version
 
       - name: Build Windows EXE
         run: npm run build:exe
