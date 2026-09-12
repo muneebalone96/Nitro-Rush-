@@ -8,25 +8,33 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout project
         uses: actions/checkout@v5
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
+      - name: Show Node and npm versions
+        run: |
+          node --version
+          npm --version
 
       - name: Install dependencies
-        run: bun install
+        run: npm install --no-package-lock
+
+      - name: Install Electron Builder
+        run: npm install --no-package-lock --save-dev electron-builder
 
       - name: Build Windows EXE
-        run: bun run build:exe
+        run: npm run build:exe
+
+      - name: Find EXE
+        shell: pwsh
+        run: |
+          Get-ChildItem -Path . -Recurse -Filter *.exe | Select-Object FullName, Length
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
         with:
           name: Nitro-Rush-Windows-EXE
           path: |
-            dist/*.exe
-            release/*.exe
-          if-no-files-found: warn
+            dist/**/*.exe
+            release/**/*.exe
+          if-no-files-found: error
